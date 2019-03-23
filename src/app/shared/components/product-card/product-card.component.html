@@ -1,0 +1,14 @@
+<div *ngIf="product.title" class="card" style="width:20rem; height: 2orem;">
+  <img *ngIf="product.imageUrl" width="250px" height="250px" class="card-img-top" [src]="product.imageUrl" alt="product.title">
+  <div class="card-body">
+    <h5 class="card-title">{{product.title}}</h5>
+    <p class="card-text">{{product.price | currency:'INR':true}}</p>
+  </div>
+  <div *ngIf="showActions && shoppingCart" class="card-footer">
+    <button *ngIf="shoppingCart.getQuantity(product) === 0; else showQuantity" (click)="addToCart()" class="btn btn-secondary btn-block">Add To Cart</button>
+    <ng-template #showQuantity>
+      <app-product-quantity [product]="product" [shopping-cart]="shoppingCart">
+      </app-product-quantity>
+    </ng-template>
+  </div>
+</div>

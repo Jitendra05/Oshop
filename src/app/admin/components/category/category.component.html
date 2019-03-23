@@ -1,0 +1,27 @@
+<p>
+  <a routerLink="/admin/categories/new" class="btn btn-primary">New Category</a>
+</p>
+<p>
+  <input #query (keyup)="filter(query.value)" type="text" class="form-control" placeholder="Search...">
+</p>
+<data-table 
+  id="categories-grid" 
+  headerTitle="List Of Categories" 
+  [limit]="10" 
+  [items]="items" 
+  [itemCount]="itemCount"  
+  (reload)="reloadItems($event)">
+
+  <data-table-column [property]="'$key'" [header]="'Id'" [sortable]="true" [resizable]="true">
+  </data-table-column>
+
+  <data-table-column [property]="'name'" [header]="'Category'" [sortable]="true" [resizable]="true">
+  </data-table-column>
+
+  <data-table-column [property]="'$key'" [header]="'Action'">
+    <ng-template #dataTableCell let-item="item">
+      <a [routerLink]="['/admin/categories/', item.$key]">Edit</a>
+    </ng-template>
+  </data-table-column>
+
+</data-table>

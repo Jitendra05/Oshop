@@ -1,0 +1,146 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+$primary-color: orange;
+$primary-color-hover: #b1c522;
+$secondary-color: white;
+
+body{
+  background-color: #e7e7e7;
+}
+
+.container {
+  margin-top: 2rem;
+}
+
+.header {
+  color:$primary-color;
+  text-align: center;
+  font-size: 2.5rem;
+  border-bottom: 2px solid $primary-color;
+  padding-bottom: 2rem;
+}
+.navbar-light .navbar-brand {
+    color: $primary-color;
+}
+
+.footer {
+  margin-bottom: 5rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: $primary-color;
+}
+
+.list-group-item.active {
+    background-color:$primary-color;
+    border-color:$primary-color;
+}
+
+.badge-warning {
+    color:$secondary-color;
+    background-color:$primary-color;
+}
+
+
+.form-control.ng-touched.ng-invalid {
+  border: 2px solid red;
+}
+
+
+body { 
+  padding-top: 30px; 
+}
+
+h1, h2, h3 { 
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.navbar { 
+  border-bottom: 3px solid #e7e7e7;
+}
+
+.navbar-light .navbar-brand {
+  color: $primary-color;
+}
+
+// .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+//   color: $primary-color-hover;
+// }
+
+.list-group-item.active {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.btn-primary {
+  margin-top: 5rem;
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.btn-primary:hover {
+  margin-top: 5rem;
+  background-color: $primary-color-hover;
+  border-color: $primary-color-hover;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.form-control:focus {
+  border-color: $primary-color;
+}
+
+/* ----------------------------------
+            Modal Popup
+------------------------------------*/
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-header {
+  background-color: #007dba;
+  padding: 10px 15px;
+  border-radius: 0;
+}
+
+
+.modal-header .close {
+  color: #fff;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.modal-title {
+  color: #fff;
+}
+
+.modal-body {
+  padding: 25px;
+  font-size: 14px;
+}
+
+.modal-footer {
+  padding: 10px 15px;
+  justify-content: center;
+}
+
+.modal-close {
+  overflow-y: auto !important;
+}
+
+.modal-open {
+  overflow-y: hidden !important;
+}
+
+@media(min-width:576px) {
+  .modal-dialog {
+    min-width: 650px;
+    margin: 10% auto !important;
+  }
+}

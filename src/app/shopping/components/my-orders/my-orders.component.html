@@ -1,0 +1,25 @@
+<h1>Orders</h1>
+<div class="row">
+  <div class="col-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>OrderId</th>
+          <th>Customer</th>
+          <th>Date</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders$ | async">
+          <td>{{ order?.$key }}</td>
+          <td>{{ order?.shopping?.name }}</td>
+          <td>{{ order?.datePlaced | date}}</td>
+          <td>
+            <a routerLink="/order-details/{{order?.$key}}">View Order</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
